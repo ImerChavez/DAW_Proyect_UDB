@@ -1,0 +1,35 @@
+.card-border{
+    border: solid 10px rgb(253, 253, 253);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+#itemmenu{
+    margin-top: 20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+}
+
+.tituloh1{
+   text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+#boton{
+    text-decoration-color: black;
+}
+
+#pie-footer{
+    width: 100%;
+    height: auto;
+
+.titulo-footer{
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
