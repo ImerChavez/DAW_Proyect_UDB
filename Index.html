@@ -17,6 +17,11 @@
 
         <!-- JS SWEET ALERT-->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- JS VALIDADOR-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+
         <!-- JS PROPIO-->
        <script src="./js/cajero.js"></script>
 
@@ -44,20 +49,16 @@
         <br>
         <div class="container-sm container-md container-lg container-xl">
             <br>
-            <h2 class="tituloh1">INGRESAR USUARIO Y CONTRASEÑA</h2>
+            <h2 class="tituloh1">INGRESAR PIN</h2>
         </div>
         <br>
         <br>
         <!-- Formulario -->
         <div class="container-sm container-md container-lg container-xl">
-            <div class="form-floating gap-2 col-4 mx-auto mb-2">
-                <input type="Usuario" class="form-control" id="Usuario" placeholder="Usuario">
-                <label for="Usuario">USUARIO</label>
-            </div>
-            <div class="form-floating gap-2 col-4 mx-auto mb-2">
+              <div class="form-floating gap-2 col-4 mx-auto mb-2">
                 <input type="Password" class="form-control" id="Password" placeholder="Password">
                 <label for="Password">PIN</label>
-            </div>
+              </div>
             <br>
             <div class="d-grid gap-2 col-md-4 mx-auto">
                 <button class="btn btn-warning" type="button" id= "Ingresar" onclick="login()">
