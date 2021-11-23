@@ -1,211 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
 
-        <!-- CSS Boostrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    
-        <!-- Fin CSS Boostrap-->
-        <script src="https://kit.fontawesome.com/2115fb84e0.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
- 
-        <!-- CSS PROPIO-->
-        <link rel="stylesheet" href="./css/index.css">
-        <!-- JS SWEET ALERT-->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!-- JS PROPIO-->
-        <script src="./js/cajero.js"></script>
-        <!-- CHART.JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Cajero_Menu</title>
-        <!-- Revisar imagen de head -->
-    </head>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-sm container-md container-lg container-xl">
-                <a class="d-inline-block align-text-top" href="#">
-                 <img src= "img/logo.PNG" alt="" width="150" height="125">
-                 <a class="navbar-brand"> <h3>CAJERO ATM POKEMON BANK</h3></a>
-                </a>
-             </div>
-        </nav>
-    <body>
-        <!-- Inicio del Header -->
-        <header>
+  <!-- CSS Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-        </header>
-        <!-- Fin del Header -->
+  <!-- Fin CSS Boostrap-->
+  <script src="https://kit.fontawesome.com/2115fb84e0.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 
-        <!-- Inicio del Main -->
-        <main>
-        <br>
-        <div class="container-sm container-md container-lg container-xl">
-          <br>
-          <h3 class="tituloh1">ESTADO DE CUENTA CUENTA #123456789</h3>
-       </div>
+  <!-- CSS PROPIO-->
+  <link rel="stylesheet" href="./css/index.css">
 
-        <br>
-        <!-- Formulario -->
-       <div class="container-sm container-md container-lg container-xl">
-        <br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">TRANSACCION</th>
-              <th scope="col">MONTO</th>
-              <th scope="col">SALDO</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="d-grid gap-2 col-4 mx-auto">
-          <button type="submit" class="btn btn-warning">IMPRIMIR ESTADO DE CUENTA</button>
-        </div>
+  <title>Cajero_Menu</title>
+  <!-- Revisar imagen de head -->
+</head>
 
-        <br>
-        <h3 class="tituloh1">ESTADISTICA DE LA CUENTA CUENTA #123456789</h3>
-        <br>
-        <br>
-      <div class="container">
-          <canvas id="myChart"></canvas>
+<body>
+  <!-- Inicio del Header -->
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-sm container-md container-lg container-xl">
+        <a class="d-inline-block align-text-top" href="#">
+          <img src="img/logo.PNG" alt="" width="150" height="125">
+          <a class="navbar-brand">
+            <h3>CAJERO ATM POKEMON BANK</h3>
+          </a>
+        </a>
       </div>
-      <script>
-        let myChart = document.getElementById('myChart').getContext('2d');
-      
-      // Global Options
-      Chart.defaults.global.defaultFontFamily = 'Lato';
-      Chart.defaults.global.defaultFontSize = 18;
-      Chart.defaults.global.defaultFontColor = '#777';
-  
-      let massPopChart = new Chart(myChart, {
-        type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-        data:{
-          labels:['Remesas', 'Depositos', 'Pago Agua Potable', 'Pago Internet', 'Pago Telefonia', 'Pago Energia Electrica'],
-          datasets:[{
-            label:'Transacciones',
-            data:[
-              617594,
-              181045,
-              153060,
-              106519,
-              105162,
-              95072
-            ],
-            //backgroundColor:'green',
-            backgroundColor:[
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)',
-              'rgba(255, 159, 64, 0.6)',
-              'rgba(255, 99, 132, 0.6)'
-            ],
-            borderWidth:1,
-            borderColor:'#777',
-            hoverBorderWidth:3,
-            hoverBorderColor:'#000'
-          }]
-        },
-        options:{
-          title:{
-            display:true,
-            text:'Listado de transacciones',
-            fontSize:25
-          },
-          legend:{
-            display:true,
-            position:'right',
-            labels:{
-              fontColor:'#000'
-            }
-          },
-          layout:{
-            padding:{
-              left:50,
-              right:0,
-              bottom:0,
-              top:0
-            }
-          },
-          tooltips:{
-            enabled:true
-          }
-        }
-      });
-      </script>
-        <br>
-        <br>
-        <div class="d-grid gap-2 col-4 mx-auto">
-          <button type="submit" class="btn btn-warning">IMPRIMIR ESTADISTICA</button>
-        </div>
-        <br>
-        <br>
-        <div class="d-grid gap-2 col-md-4 mx-auto">
-          <button class="btn btn-warning" type="button">
-            <a href="./Menu.html">REGRESAR</a>
-          </button>
-          </div>
-      </div>     
+    </nav>
+  </header>
+  <!-- Fin del Header -->
+
+  <!-- Inicio del Main -->
+  <main>
+    <br>
+    <div class="container-sm container-md container-lg container-xl">
       <br>
-       <br>
-        </main>
-        <!-- Fin del Main -->
+      <h3 class="tituloh1">ASH KETCHUM</h3>
+      <h3 class="tituloh1">CUENTA #0987654321</h3>
+    </div>
 
-        <!-- Inicio del footer REVISAR EL FOOTHER -->
-        <footer class="foot-light bg-light" id="pie-page">
-            <br>
-            <br>
-            <div class="container-sm container-md container-lg container-xl">
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 d-flex align-items-center">
-                  <div id="pie-footer">
-                      <div class="row">
-                         <p class="titulo-footer">
-                            Todos los derechos reservados.
-                          </p>
-                          <p class="titulo-footer">
-                            Copyright © 2021
-                          </p>
-                          <p class="titulo-footer">
-                            IC Desing
-                          </p>
+    <br>
+    <!-- Formulario -->
+    <div class="container-sm container-md container-lg container-xl">
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">DESCRIPCIONES</th>
+            <th scope="col">MONTO</th>
+          </tr>
+        </thead>
+        <tbody id="estadoCuenta">
+        </tbody>
+      </table>
 
-                      </div>
-                  </div>
-                </div>
-                <div class="col-md-4"></div>
-              </div>
+      <br>
+      <h3 class="tituloh1">ESTADISTICA DE LA CUENTA CUENTA #123456789</h3>
+      <br>
+      <br>
+      <div class="container">
+        <canvas id="myChart"></canvas>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="d-grid gap-2 col-md-4 mx-auto">
+        <button class="btn btn-warning btn-lg" type="button">
+          <a href="./Menu.html">REGRESAR</a>
+        </button>
+      </div>
+    </div>
+    <br>
+    <br>
+  </main>
+  <!-- Fin del Main -->
+
+  <!-- Inicio del footer REVISAR EL FOOTHER -->
+  <footer class="foot-light bg-light" id="pie-page">
+    <br>
+    <br>
+    <div class="container-sm container-md container-lg container-xl">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 d-flex align-items-center">
+          <div id="pie-footer">
+            <div class="row">
+              <p class="titulo-footer">
+                Todos los derechos reservados.
+              </p>
+              <p class="titulo-footer">
+                Copyright © 2021
+              </p>
+              <p class="titulo-footer">
+                IC Desing
+              </p>
+
             </div>
-            <br>
-            <br>
-          </footer>
-        <!-- Fin del footer -->
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </footer>
+  <!-- Fin del footer -->
+  <!-- JS SWEET ALERT-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- JS PROPIO-->
+  <script src="./js/cajero.js"></script>
+  <!-- CHART.JS-->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
-        <!-- JS Boostrap-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>   
-    </body>
+  <script>
+    var transaccionesHistorial = JSON.parse(localStorage.getItem("Transacciones"));
+
+    var depo = 0
+    var retiro = 0
+    var luz = 0
+    var internet= 0
+    var fijo = 0
+    var agua = 0
+
+    transaccionesHistorial.forEach(e => {
+      if (e.tipo == 'Deposito'){
+        depo += e.monto
+      } else if (e.tipo == 'Retiro') {
+        retiro = retiro + Number(e.monto)
+      } else if (e.tipo == "Pago Electricidad"){
+        luz = luz + Number(e.monto)
+      } else if (e.tipo == 'Pago Inernet'){
+        internet = internet + Number(e.monto)
+      } else if (e.tipo == 'Pago Telefonia') {
+        fijo = fijo + Number(e.monto)
+      } else if (e.tipo == 'Pago Agua Potable'){
+        agua = agua + Number(e.monto)
+      }
+    });
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Deposito', 'Retiro', 'Pago de luz', 'Pago de Internet', 'Pago de Linea fija', 'Pago de Agua'],
+            datasets: [{
+                label: 'Gastros',
+                data: [depo, retiro, luz, internet, fijo, agua],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+  </script>
+  <!-- JS Boostrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -1,3 +1,15 @@
+.tituloh1{
+   text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*CARDS*/
 .card-border{
     border: solid 10px rgb(253, 253, 253);
     border-radius: 20px;
@@ -13,15 +25,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
 }
 
-.tituloh1{
-   text-align: center;
-    position: relative;
-    top: 10px;
+#itemmenu a{
+    text-decoration: none;
+    color: black;
 }
+
 
 #pie-footer{
     width: 100%;
     height: auto;
+}
 
 .titulo-footer{
     color: black;
